@@ -86505,7 +86505,8 @@ if(s)return"Enter a valid bank card number"
 else if(B.b.q(this.a.c,a))return"This card has already add been added"
 else if(!A.aK0(a))return"Invalid card number (Luhn)"
 return null},
-adV(a){if(a==null||a.length>15)return"Maximum 15 characters"
+adV(a){if(a==null||a.length===0)return"Enter a card issuer (Visa)"
+else if(a.length>15)return"Maximum 15 characters"
 return null},
 adN(a){var s
 if(a!=null)if(a.length===3){s=A.aK("^[0-9]+$",!0,!1,!1)
@@ -86519,17 +86520,17 @@ return null},
 F(a){var s=this,r=null,q=A.a([],t.p),p=A.Hs(50)
 q.push(A.du(r,B.Ca,B.q,r,r,new A.bZ(B.dH,r,A.Hu(B.fc),p,r,r,B.a3),50,r,r,200))
 q.push(B.yv)
-q.push(A.aeb(s.e,B.Fj,B.yS,s.gadK()))
-q.push(A.aeb(s.f,B.Fl,B.yR,s.gadS()))
-q.push(A.aeb(s.r,B.Fi,B.yS,s.gadU()))
-q.push(A.aeb(s.w,B.Fm,B.yR,s.gadM()))
+q.push(A.aeb(s.e,B.Fi,B.yS,s.gadK()))
+q.push(A.aeb(s.f,B.Fk,B.yR,s.gadS()))
+q.push(A.aeb(s.r,B.Fm,B.yS,s.gadU()))
+q.push(A.aeb(s.w,B.Fl,B.yR,s.gadM()))
 q.push(s.a1h())
 q.push(B.yv)
 q.push(s.a1f(a))
 q=A.qW(q,B.aY,B.aP,B.bo)
 return A.arM(new A.xR(q,B.im,s.d),r,r,r,B.am)},
 a1h(){var s=this,r=s.x,q=s.a.d,p=A.V(q).i("a5<1,jg<k>>")
-return A.aFQ(B.Fk,A.a7(new A.a5(q,new A.ako(),p),!0,p.i("ar.E")),new A.akp(s),s.gadO(),r,t.N)},
+return A.aFQ(B.Fj,A.a7(new A.a5(q,new A.ako(),p),!0,p.i("ar.E")),new A.akp(s),s.gadO(),r,t.N)},
 a1f(a){var s=null
 return new A.Ja(new A.akm(this,a),s,s,s,s,B.q,s,!1,s,!0,B.Tj,s)}}
 A.akp.prototype={
@@ -89890,11 +89891,11 @@ B.Ff=new A.rF(1,"repeatX")
 B.Fg=new A.rF(2,"repeatY")
 B.aA=A.a(s([]),t.oU)
 B.Fh=new A.kB("\ufffc",null,null,!0,!0,B.aA)
-B.Fi=new A.jo(null,null,null,"Enter Card Type",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
-B.Fj=new A.jo(null,null,null,"Enter Alias (Optional)",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
-B.Fk=new A.jo(null,null,null,"Select a Country",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
-B.Fl=new A.jo(null,null,null,"Enter Card Number",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
-B.Fm=new A.jo(null,null,null,"Enter CCV",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
+B.Fi=new A.jo(null,null,null,"Enter Alias (Optional)",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
+B.Fj=new A.jo(null,null,null,"Select a Country",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
+B.Fk=new A.jo(null,null,null,"Enter Card Number",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
+B.Fl=new A.jo(null,null,null,"Enter CCV",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
+B.Fm=new A.jo(null,null,null,"Enter Card Issuer",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
 B.WO=new A.jo(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null)
 B.Fo=new A.dH(0.4,1,B.aL)
 B.Dn=new A.dR(0.6,0.04,0.98,0.335)
